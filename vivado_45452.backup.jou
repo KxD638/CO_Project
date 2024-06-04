@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 27 21:22:54 2024
+# Process ID: 45452
+# Current directory: C:/learning/2024spring/CO/CS202Project/CS202Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7424 C:\learning\2024spring\CO\CS202Project\CS202Project\CO_project.xpr
+# Log file: C:/learning/2024spring/CO/CS202Project/CS202Project/vivado.log
+# Journal file: C:/learning/2024spring/CO/CS202Project/CS202Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/learning/2024spring/CO/CS202Project/CS202Project/CO_project.xpr
+update_compile_order -fileset sources_1

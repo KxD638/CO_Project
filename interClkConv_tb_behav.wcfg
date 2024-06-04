@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="interClkConv_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="interClkConv_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="320000001fs"></ZoomEndTime>
+      <Cursor1Time time="320000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="93"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/interClkConv_tb/cpuclk" type="logic">
+      <obj_property name="ElementShortName">cpuclk</obj_property>
+      <obj_property name="ObjectShortName">cpuclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/enter" type="logic">
+      <obj_property name="ElementShortName">enter</obj_property>
+      <obj_property name="ObjectShortName">enter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/interrupt" type="logic">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/clk_inter" type="logic">
+      <obj_property name="ElementShortName">clk_inter</obj_property>
+      <obj_property name="ObjectShortName">clk_inter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/cntclk" type="logic">
+      <obj_property name="ElementShortName">cntclk</obj_property>
+      <obj_property name="ObjectShortName">cntclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/inter_ack" type="logic">
+      <obj_property name="ElementShortName">inter_ack</obj_property>
+      <obj_property name="ObjectShortName">inter_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/firstTime" type="logic">
+      <obj_property name="ElementShortName">firstTime</obj_property>
+      <obj_property name="ObjectShortName">firstTime</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/active" type="logic">
+      <obj_property name="ElementShortName">active</obj_property>
+      <obj_property name="ObjectShortName">active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/enter_cnt" type="array">
+      <obj_property name="ElementShortName">enter_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">enter_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/period" type="array">
+      <obj_property name="ElementShortName">period[31:0]</obj_property>
+      <obj_property name="ObjectShortName">period[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/enter_final" type="logic">
+      <obj_property name="ElementShortName">enter_final</obj_property>
+      <obj_property name="ObjectShortName">enter_final</obj_property>
+   </wvobject>
+   <wvobject fp_name="/interClkConv_tb/uconv/enter_out" type="logic">
+      <obj_property name="ElementShortName">enter_out</obj_property>
+      <obj_property name="ObjectShortName">enter_out</obj_property>
+   </wvobject>
+</wave_config>
