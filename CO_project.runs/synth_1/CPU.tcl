@@ -53,6 +53,9 @@ read_verilog -library xil_defaultlib {
   C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/new/scan_seg.v
   C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/new/CPU.v
 }
+read_ip -quiet C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/RAM/RAM.xci
+set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
+
 read_ip -quiet C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/prgrom/prgrom.xci
 set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/prgrom/prgrom_ooc.xdc]
 
@@ -60,9 +63,6 @@ read_ip -quiet C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/so
 set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
-
-read_ip -quiet C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/RAM/RAM.xci
-set_property used_in_implementation false [get_files -all c:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -78,6 +78,8 @@ set_property used_in_implementation false [get_files C:/Users/dengkaixuan/vivado
 read_xdc C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/constrs_2/new/new_constrs.xdc
 set_property used_in_implementation false [get_files C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.srcs/constrs_2/new/new_constrs.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top CPU -part xc7a35tcsg324-1
 

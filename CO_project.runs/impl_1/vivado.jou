@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Jun  5 04:46:43 2024
-# Process ID: 13968
+# Start of session at: Wed Jun  5 05:48:57 2024
+# Process ID: 1400
 # Current directory: C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.runs/impl_1
 # Command line: vivado.exe -log CPU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CPU.tcl -notrace
 # Log file: C:/Users/dengkaixuan/vivado_project/CO_Project/CO_project.runs/impl_1/CPU.vdi

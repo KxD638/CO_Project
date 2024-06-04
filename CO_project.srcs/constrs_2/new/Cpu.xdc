@@ -21,30 +21,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[6]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[7]}]
 
-set_property PACKAGE_PIN U3 [get_ports {io_rdata[8]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[8]}]
-
-set_property PACKAGE_PIN U2 [get_ports {io_rdata[9]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[9]}]
-
-set_property PACKAGE_PIN V2 [get_ports {io_rdata[10]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[10]}]
-
-set_property PACKAGE_PIN V5 [get_ports {io_rdata[11]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {io_rdata[11]}]
-
-set_property PACKAGE_PIN V4 [get_ports {test_switch[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {test_switch[0]}]
-
-set_property PACKAGE_PIN R3 [get_ports {test_switch[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {test_switch[1]}]
-
-set_property PACKAGE_PIN T3 [get_ports {test_switch[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {test_switch[2]}]
-
-set_property PACKAGE_PIN T5 [get_ports {test_switch[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {test_switch[3]}]
-
 set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 
 set_property PACKAGE_PIN J2 [get_ports {led[1]}]
@@ -64,36 +40,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[6]}]
 
 set_property PACKAGE_PIN F6 [get_ports {led[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[7]}]
-
-set_property PACKAGE_PIN K1 [get_ports {led[8]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[8]}]
-
-set_property PACKAGE_PIN H6 [get_ports {led[9]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[9]}]
-
-set_property PACKAGE_PIN H5 [get_ports {led[10]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[10]}]
-
-set_property PACKAGE_PIN J5 [get_ports {led[11]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[11]}]
-
-set_property PACKAGE_PIN K6 [get_ports {led[12]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[12]}]
-
-set_property PACKAGE_PIN L1 [get_ports {led[13]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[13]}]
-
-set_property PACKAGE_PIN M1 [get_ports {led[14]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[14]}]
-
-set_property PACKAGE_PIN K3 [get_ports {led[15]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]
-
-set_property PACKAGE_PIN P17 [get_ports fpga_clk]
-set_property IOSTANDARD LVCMOS33 [get_ports fpga_clk]
-
-set_property PACKAGE_PIN P15 [get_ports fpga_rst]
-set_property IOSTANDARD LVCMOS33 [get_ports fpga_rst]
 
 set_property PACKAGE_PIN R15 [get_ports enter]
 set_property IOSTANDARD LVCMOS33 [get_ports enter]
@@ -169,8 +115,3 @@ set_property IOSTANDARD LVCMOS33 [get_ports {seg_out1[1]}]
 
 set_property PACKAGE_PIN H2 [get_ports {seg_out1[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_out1[0]}]
-
-# 为 tx 和 rx 端口设置属性
-set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN T4} [get_ports tx]
-set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN N5} [get_ports rx]
-

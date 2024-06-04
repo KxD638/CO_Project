@@ -47,5 +47,5 @@ module IFetch(
     end
     
     //prgrom urom(.clka(kickOff ? clk:upg_clk_i),.wea(kickOff ? 1'b0:upg_wen_i), .addra(kickOff? PC[15:2]:upg_adr_i),.dina(kickOff?32'h0000_0000:upg_dat_i), .douta(inst));
-    prgrom urom(.clka(clk), .addra(PC[15:2]), .dout(inst));
+    prgrom urom(.clka(clk), .addra(PC[15:2]), .douta(inst));
 endmodule
