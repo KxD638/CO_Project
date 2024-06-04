@@ -63,7 +63,7 @@ module MemOrIO(//Data Memory and IO are both in this module, 对外认为Data Memory
     
 //    RAM uram(.clka(kickOff ? ~clk:upg_clk_i), .wea(kickOff ? mWrite:upg_wen_i), .addra(kickOff ? ALUResult[16:2]:upg_adr_i),
 //     .dina(kickOff ? r_rdata:upg_dat_i), .douta(m_rdata));
-    RAM uram(.clka( ~clk), .wea( mWrite), .addra( ALUResult[16:2]), .dina(r_rdata), .douta(m_rdata)); 
+    RAM uram(.clka( ~clk), .wea( mWrite), .addra( ALUResult[15:2]), .dina(r_rdata), .douta(m_rdata)); 
     
     //确认写入Register的数据
     always @(*)

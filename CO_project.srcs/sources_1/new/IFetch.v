@@ -28,16 +28,16 @@ module IFetch(
     input Condition,//1'b1 while branch condition is satisfied
     input Jump,//1'b1 while J-type inst
     output [31:0] inst,//inst fetched from inst memory
-    output reg [31:0] PC,
+    output reg [31:0] PC
     // UART Programmer Pinouts
-    input upg_rst_i, // UPG reset (Active High)
-    input upg_clk_i, // UPG clock (10MHz)
-    input upg_wen_i, // UPG write enable
-    input[13:0] upg_adr_i, // UPG write address
-    input[31:0] upg_dat_i, // UPG write data
-    input upg_done_i // 1 if program finished
+    //input upg_rst_i, // UPG reset (Active High)
+    //input upg_clk_i, // UPG clock (10MHz)
+    //input upg_wen_i, // UPG write enable
+    //input[13:0] upg_adr_i, // UPG write address
+    //input[31:0] upg_dat_i, // UPG write data
+    //input upg_done_i // 1 if program finished
     );
-    wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i );
+    //wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i );
     
     always @(negedge clk, negedge rst) begin
     if(rst == 1'b0) PC <= 32'h0000_0000;
@@ -46,6 +46,6 @@ module IFetch(
     else PC <= PC + 4;
     end
     
-    prgrom urom(.clka(kickOff ? clk:upg_clk_i),.wea(kickOff ? 1'b0:upg_wen_i), .addra(kickOff? PC[15:2]:upg_adr_i),.dina(kickOff?32'h0000_0000:upg_dat_i), .douta(inst));
-    
+    //prgrom urom(.clka(kickOff ? clk:upg_clk_i),.wea(kickOff ? 1'b0:upg_wen_i), .addra(kickOff? PC[15:2]:upg_adr_i),.dina(kickOff?32'h0000_0000:upg_dat_i), .douta(inst));
+    prgrom urom(.clka(clk), .addra(PC[15:2]), .dout(inst));
 endmodule
