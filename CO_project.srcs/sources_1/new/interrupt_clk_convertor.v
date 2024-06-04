@@ -28,13 +28,10 @@ module interrupt_clk_convertor(
     input rst,
     input enter,//确认键
     input interrupt,//中断信号，需要中断时1'b1，来自Controller
-    output reg clk_inter//具有中断功能的clk，中断时会维持当前值，正常时与cpuclk一致
-    //input cntclk
+    output reg clk_inter,//具有中断功能的clk，中断时会维持当前值，正常时与cpuclk一致
+    input cntclk
     );
     
-    wire cntclk;//cpuclk两倍频率的时钟信号
-    
-    cnt_clk ucnt_clk(.clk_in1(cpuclk), .clk_out1(cntclk));
     
     wire enter_out;//消抖后的确认键
     
@@ -42,7 +39,7 @@ module interrupt_clk_convertor(
     
     reg active;//其实是个使能信号，当interrupt或enter触发后会失效两秒
     
-    wire enter_final = ~enter_out && active;//最终使用的enter信号
+    wire enter_final = enter_out && active;//最终使用的enter信号
     
     reg [31:0] enter_cnt;//计数器，为了数两秒（位宽应该是超了，但没必要算的太严格）
     

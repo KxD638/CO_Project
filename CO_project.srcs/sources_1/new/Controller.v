@@ -30,8 +30,9 @@ module Controller(
     output reg [2:0] ALUOp,//indicate what type inst is, different from PPT
     output reg MemorIOWrite,//1'b1 while need to write to Data Memory
     output reg ALUSrc,//1'b1 while select immediate as the operand of ALU, otherwise select rs2Data
-    output reg RegWrite,//1'b1 while need to write to Registers
-    output reg triggerException // Output to indicate an exception should be triggered
+    output reg RegWrite//1'b1 while need to write to Registers
+    //先注释掉，这根线连到哪去都不知道
+    //output reg triggerException // Output to indicate an exception should be triggered
     );
     always @(*)
         case(op)
@@ -125,7 +126,7 @@ module Controller(
                 MemorIOWrite = 1'b0;
                 ALUSrc = 1'b0;
                 RegWrite = 1'b0;
-                triggerException = 1'b1;  // 触发异常
+                //triggerException = 1'b1;  // 触发异常
             end
             default:begin
             Jump = 1'b0;
@@ -136,7 +137,7 @@ module Controller(
             MemorIOWrite = 1'b0;
             ALUSrc = 1'b0;
             RegWrite = 1'b0;
-            triggerException = 1'b0;
+            //triggerException = 1'b0;
             end
         endcase
 endmodule

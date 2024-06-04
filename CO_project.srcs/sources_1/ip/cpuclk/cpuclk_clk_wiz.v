@@ -57,7 +57,7 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out1____23.000______0.000______50.0______342.117____303.235
-// clk_out2____10.000______0.000______50.0______391.228____303.235
+// clk_out2____46.000_____20.250______50.0______300.552____303.235
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -125,8 +125,8 @@ wire clk_in2_cpuclk;
     .CLKOUT0_DIVIDE       (40),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
-    .CLKOUT1_DIVIDE       (92),
-    .CLKOUT1_PHASE        (0.000),
+    .CLKOUT1_DIVIDE       (20),
+    .CLKOUT1_PHASE        (20.250),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (10.000))
   plle2_adv_inst

@@ -31,8 +31,8 @@ module Debounce(
     
     always @(posedge clk, negedge rst) begin
         if(~rst) begin
-            last_signal <= 1'b1;
-            signal_out <= 1'b1;
+            last_signal <= 1'b0;
+            signal_out <= 1'b0;
         end
         else begin
             if(signal_in && !last_signal) begin

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1717523593">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1717531803">
   <File Type="PA-TCL" Name="CPU.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_reports.tcl"/>
@@ -118,15 +118,21 @@
       <Option Name="TopModule" Val="CPU"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
-    <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/Cpu.xdc">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
+    <File Path="$PSRCDIR/constrs_2/new/Cpu.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_2/new/new_constrs.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/new_constrs.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -137,6 +143,4 @@
   <BlockFileSet Type="BlockSrcs" Name="prgrom"/>
   <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
   <BlockFileSet Type="BlockSrcs" Name="RAM"/>
-  <BlockFileSet Type="BlockSrcs" Name="cnt_clk"/>
-  <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
 </GenRun>
